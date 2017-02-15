@@ -22,23 +22,23 @@ ES6 改变了块级作用域内声明的函数的处理规则，显然会对老�
 根据这三条规则，在浏览器的 ES6 环境中，块级作用域内声明的函数，行为类似于var声明的变量
 考虑到环境导致的行为差异太大，应该避免在块级作用域内声明函数。如果确实需要，也应该写成函数表达式，而不是函数声明语句。
 
-`
-// 函数声明语句
-{
-  let a = 'secret';
-  function f() {
-    return a;
-  }
-}
 
-// 函数表达式
-{
-  let a = 'secret';
-  let f = function () {
-    return a;
-  };
-}
-`
+    // 函数声明语句
+    {
+      let a = 'secret';
+      function f() {
+        return a;
+      }
+    }
+
+    // 函数表达式
+    {
+      let a = 'secret';
+      let f = function () {
+        return a;
+      };
+    }
+
 
 ## do 表达式
 让块级作用域变成表达式，可以返回值
