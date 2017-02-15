@@ -6,3 +6,4 @@ var es5Code = require('babel-core')
     .transform(es6Code, {
         presets: ['es2015']
     }).code;
+
